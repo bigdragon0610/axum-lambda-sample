@@ -1,0 +1,12 @@
+services:
+  app:
+    build: ./docker/app
+    volumes:
+      - tmp_target:/tmp/target
+      - .:/app
+    ports:
+      - "8080:8080"
+    tty: true
+
+volumes:
+  tmp_target:
